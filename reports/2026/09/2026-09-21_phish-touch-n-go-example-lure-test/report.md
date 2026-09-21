@@ -2,7 +2,7 @@
 
 - **Indicator:** `hxxps://tng-verify[.]example-lure[.]test/login` (url)
 - **Verdict:** MALICIOUS (score -2)
-- **Generated:** 2026-09-21 17:50 UTC
+- **Generated:** 2026-09-21 18:07 UTC
 - **Sharing:** TLP:CLEAR (published publicly)
 - **Impersonates:** Touch 'n Go
 - **Resolves to:** `203[.]0[.]113[.]7`
@@ -39,27 +39,42 @@ Final destination: `hxxps://tng-verify[.]example-lure[.]test/login`
 
 - TEST UPLOAD. This is a synthetic case (a reserved .test domain and documentation IP range) created only to verify that publishing works. It describes no real site, person or incident. Safe to delete.
 
-## Diamond model
+## TTPs
+
+Tactics, techniques and procedures, mapped to MITRE ATT&CK. Each row is backed by something that was observed.
+
+| Tactic | Technique | ID | Procedure |
+| --- | --- | --- | --- |
+| Initial Access | Phishing: Spearphishing Link | T1566.002 | A phishing link delivered as a QR code |
+| Resource Development | Acquire Infrastructure: Domains | T1583.001 | A domain registered 6 days ago |
+| Reconnaissance | Phishing for Information: Spearphishing Link | T1598.003 | The page asks for a phone number and a one-time code |
+
+## Intrusion analysis
 
 Event: Phishing impersonating Touch 'n Go, from a QR code (example-lure[.]test, 2026-09-21).
 
-The Diamond Model describes one intrusion through four linked features. Confidence is High when the finding was observed directly, and Medium or Low when it is an assessment. Unknown means it could not be determined.
+Confidence is High when the finding was observed directly, and Medium or Low when it is an assessment. Unknown means it could not be determined.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
 flowchart TB
   A["Adversary<br/>Unattributed"]
   C["Capability<br/>OTP phishing, QR lure"]
-  I["Infrastructure<br/>example-lure[.]test, AS64500"]
-  V["Victim<br/>Touch 'n Go customers (Malaysia)"]
+  I["Infrastructure<br/>example-lure[.]test,<br/>AS64500"]
+  V["Victim<br/>Touch 'n Go customers<br/>(Malaysia)"]
   A --- C
   A --- I
   C --- V
   I --- V
-  A -.- V
-  C -.- I
+  classDef adv fill:#f9d5dc,stroke:#d20f39,color:#1e1e2e
+  classDef cap fill:#fde6d2,stroke:#c25b00,color:#1e1e2e
+  classDef inf fill:#d6e4ff,stroke:#1e66f5,color:#1e1e2e
+  classDef vic fill:#d9f0d9,stroke:#2c8a2c,color:#1e1e2e
+  class A adv
+  class C cap
+  class I inf
+  class V vic
 ```
-
-Solid lines join neighbouring corners. The dotted lines are the two axes: adversary to victim (social and political), and capability to infrastructure (technology).
 
 | Feature | Aspect | Finding | Confidence |
 | --- | --- | --- | --- |
