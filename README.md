@@ -1,21 +1,22 @@
 # fukuro-reports
 
-A public log of phishing and QR-code lure investigations, with a focus on Malaysian brands and payment apps.
+Malaysia-focused threat hunting reports on IPs, domains, URLs, file hashes and QR codes, with a focus on Malaysian brands, organisations and payment apps.
 
 Browse the reports: [reports/](reports/README.md)
 
 ## What each report contains
 
 - A verdict with the reasons behind it, written out in plain words
-- Where the link really goes: the redirect chain and the landing page
+- Where a link goes, or what a file did when it was run
 - Indicators of compromise, defanged so nothing is clickable
-- MITRE ATT&CK techniques, only where the evidence supports them
+- TTPs mapped to MITRE ATT&CK, only where the evidence supports them
+- An intrusion analysis (adversary, capability, infrastructure, victim), with what is not known stated
 - Recommended actions for a SOC
 - Where useful: a YARA rule, and STIX and MISP exports for sharing
 
-## How the findings are produced
+## About the findings
 
-Each case is triaged with a tool I built (Fukuro). A QR code is decoded locally, and the link is followed safely, with internal addresses blocked, and checked against Malaysian brand lookalike rules and around 17 public threat sources. The verdict comes from a transparent rule-based score, not a black box. When I have seen a page myself and confirmed it is phishing, the report says that was my decision and not something the tool detected.
+Each case is triaged with a tool I built (Fukuro). The verdict comes from a transparent, rule-based assessment. When I have seen a page myself and confirmed it is phishing, the report says that was my decision and not something the tool detected.
 
 ## Handling
 
