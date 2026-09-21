@@ -14,10 +14,6 @@ Browse the reports: [reports/](reports/README.md)
 - Recommended actions for a SOC
 - Where useful: a YARA rule, and STIX and MISP exports for sharing
 
-## About the findings
-
-Each case is triaged with a tool I built (Fukuro). The verdict comes from a transparent, rule-based assessment. When I have seen a page myself and confirmed it is phishing, the report says that was my decision and not something the tool detected.
-
 ## Handling
 
 - Reports are TLP:CLEAR and published publicly.
