@@ -2,7 +2,7 @@
 
 - **Indicator:** `hxxps://tng-verify[.]example-lure[.]test/login` (url)
 - **Verdict:** MALICIOUS (score -2)
-- **Generated:** 2026-09-21 20:14 UTC
+- **Generated:** 2026-09-21 20:22 UTC
 - **Sharing:** TLP:CLEAR (published publicly)
 - **Impersonates:** Touch 'n Go
 - **Resolves to:** `203[.]0[.]113[.]7`
