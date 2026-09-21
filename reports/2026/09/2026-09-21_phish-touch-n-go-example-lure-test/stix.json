@@ -1,0 +1,57 @@
+{
+  "type": "bundle",
+  "id": "bundle--c90dffcd-0b97-4c71-9a81-d26bfff723bb",
+  "objects": [
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--267aefbb-5685-48d0-a9fa-fc9ce60f4b05",
+      "created": "2026-09-21T20:14:13.373Z",
+      "modified": "2026-09-21T20:14:13.373Z",
+      "name": "url: https://tng-verify.example-lure.test/login",
+      "description": "Investigated indicator. Fukuro verdict: malicious (score -2)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://tng-verify.example-lure.test/login']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-21T20:14:13.373Z",
+      "confidence": 85
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d161eb08-4e99-4eed-b3e3-b46d5c7bef1b",
+      "created": "2026-09-21T20:14:13.373Z",
+      "modified": "2026-09-21T20:14:13.373Z",
+      "name": "ipv4: 203.0.113.7",
+      "description": "Resolved IP of https://tng-verify.example-lure.test/login",
+      "indicator_types": [
+        "anomalous-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '203.0.113.7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-21T20:14:13.373Z",
+      "confidence": 30
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c4d733d7-a619-405e-b3f9-5339d652d9be",
+      "created": "2026-09-21T20:14:13.373Z",
+      "modified": "2026-09-21T20:14:13.373Z",
+      "name": "domain: tng-verify.example-lure.test",
+      "description": "Domain of the investigated link",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'tng-verify.example-lure.test']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-21T20:14:13.373Z",
+      "confidence": 85,
+      "labels": [
+        "lure-domain"
+      ]
+    }
+  ]
+}

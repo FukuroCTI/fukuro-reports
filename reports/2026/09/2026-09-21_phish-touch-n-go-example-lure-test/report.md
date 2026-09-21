@@ -2,7 +2,7 @@
 
 - **Indicator:** `hxxps://tng-verify[.]example-lure[.]test/login` (url)
 - **Verdict:** MALICIOUS (score -2)
-- **Generated:** 2026-09-21 18:07 UTC
+- **Generated:** 2026-09-21 20:14 UTC
 - **Sharing:** TLP:CLEAR (published publicly)
 - **Impersonates:** Touch 'n Go
 - **Resolves to:** `203[.]0[.]113[.]7`
@@ -35,9 +35,13 @@ Final destination: `hxxps://tng-verify[.]example-lure[.]test/login`
 - **Phone number field:** Yes
 - **Asks for a phone number and a one-time code:** Yes
 
+## Evidence
+
+![Evidence 1](evidence-1.png)
+
 ## Analyst notes
 
-- TEST UPLOAD. This is a synthetic case (a reserved .test domain and documentation IP range) created only to verify that publishing works. It describes no real site, person or incident. Safe to delete.
+- TEST UPLOAD. Synthetic case (reserved .test domain, documentation IP range, generated placeholder screenshot). It describes no real site, person or incident. Safe to delete.
 
 ## TTPs
 
