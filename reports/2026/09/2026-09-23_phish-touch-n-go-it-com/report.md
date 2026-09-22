@@ -2,7 +2,7 @@
 
 - **Indicator:** `hxxps://qxxdaft[.]it[.]com/moneypacketmp` (url)
 - **Verdict:** MALICIOUS (score 3)
-- **Generated:** 2026-09-22 17:07 UTC
+- **Generated:** 2026-09-22 23:41 UTC
 - **Sharing:** TLP:CLEAR (published publicly)
 - **Impersonates:** Touch 'n Go
 - **Resolves to:** `172[.]67[.]191[.]98`
