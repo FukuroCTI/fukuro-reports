@@ -2,7 +2,7 @@
 
 - **Indicator:** `hxxps://jkmss-a[.]sbs/x` (url)
 - **Verdict:** MALICIOUS (score -6)
-- **Generated:** 2026-09-22 12:17 UTC
+- **Generated:** 2026-09-22 12:18 UTC
 - **Impersonates:** Touch 'n Go
 - **Resolves to:** `45[.]33[.]32[.]156`
 
