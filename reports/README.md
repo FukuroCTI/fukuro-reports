@@ -4,11 +4,10 @@ Threat hunting reports on IPs, domains, URLs, file hashes and QR codes, newest f
 
 <!-- fukuro-index:start -->
 
-**2 reports**, newest first.
+**1 report**, newest first.
 
 | Date | Finding | Subject | Verdict | Report |
 | --- | --- | --- | --- | --- |
-| 2026-09-22 | Test report | `example-lure[.]test` | malicious | [report](2026/09/2026-09-21_test-case1/report.md) |
 | 2026-09-22 | Phishing lure impersonating Touch 'n Go, from a QR code | `jkmss-a[.]sbs` | malicious | [report](2026/09/2026-09-22_phish-touch-n-go-jkmss-a-sbs/report.md) |
 
 <!-- fukuro-index:end -->
