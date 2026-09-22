@@ -65,26 +65,7 @@ Event: Phishing impersonating Touch 'n Go, from a QR code (jkmss-a[.]sbs, 2026-0
 
 Confidence is High when the finding was observed directly, and Medium or Low when it is an assessment. Unknown means it could not be determined.
 
-```mermaid
-%%{init: {'flowchart': {'curve': 'linear'}}}%%
-flowchart TB
-  A["Adversary<br/>Unattributed"]
-  C["Capability<br/>Credential phishing,<br/>QR lure"]
-  I["Infrastructure<br/>jkmss-a[.]sbs, AS13335"]
-  V["Victim<br/>Touch 'n Go customers<br/>(Malaysia)"]
-  A --- C
-  A --- I
-  C --- V
-  I --- V
-  classDef adv fill:#f9d5dc,stroke:#d20f39,color:#1e1e2e
-  classDef cap fill:#fde6d2,stroke:#c25b00,color:#1e1e2e
-  classDef inf fill:#d6e4ff,stroke:#1e66f5,color:#1e1e2e
-  classDef vic fill:#d9f0d9,stroke:#2c8a2c,color:#1e1e2e
-  class A adv
-  class C cap
-  class I inf
-  class V vic
-```
+![Diamond model](diamond.svg)
 
 | Feature | Aspect | Finding | Confidence |
 | --- | --- | --- | --- |
