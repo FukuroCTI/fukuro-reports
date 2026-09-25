@@ -1,0 +1,318 @@
+{
+  "type": "bundle",
+  "id": "bundle--48b35992-2a97-585b-bdbc-4fd87cc1e84f",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "created": "2026-09-22T00:00:00.000Z",
+      "modified": "2026-09-22T00:00:00.000Z",
+      "name": "FukuroCTI",
+      "identity_class": "individual"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e",
+      "name": "Phishing: Spearphishing Link",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002",
+          "url": "https://attack.mitre.org/techniques/T1566/002/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--497132f3-9146-5c0a-b0ce-33c38a8538d7",
+      "name": "Phishing for Information: Spearphishing Link",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003",
+          "url": "https://attack.mitre.org/techniques/T1598/003/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a",
+      "name": "Acquire Infrastructure: Domains",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001",
+          "url": "https://attack.mitre.org/techniques/T1583/001/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--aa8e1d26-d21f-569f-885e-2651483155cc",
+      "name": "url: https://m-oil.cyou/moneypocket48?utm_source=bwoqvej2dmn6&utm_medium=bz0jlqpu&utm_campaign=3tkpawgn9ilqg5h&utm_content=goxilyyexu&utm_term=as9xuhmtx8",
+      "description": "Investigated indicator. Fukuro verdict: malicious (score -6)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://m-oil.cyou/moneypocket48?utm_source=bwoqvej2dmn6&utm_medium=bz0jlqpu&utm_campaign=3tkpawgn9ilqg5h&utm_content=goxilyyexu&utm_term=as9xuhmtx8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-25T00:00:00.000Z",
+      "valid_until": "2026-10-25T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--e12b6953-eb5c-5728-b8f5-844dbd71bfda",
+      "name": "ipv4: 172.67.221.176",
+      "description": "Resolved IP of https://m-oil.cyou/moneypocket48?utm_source=bwoqvej2dmn6&utm_medium=bz0jlqpu&utm_campaign=3tkpawgn9ilqg5h&utm_content=goxilyyexu&utm_term=as9xuhmtx8",
+      "indicator_types": [
+        "anomalous-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '172.67.221.176']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-25T00:00:00.000Z",
+      "valid_until": "2026-10-09T00:00:00.000Z",
+      "confidence": 30,
+      "labels": [
+        "tlp:clear"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--d299a068-24a9-53b9-b79d-b844079bc53a",
+      "name": "domain: m-oil.cyou",
+      "description": "Domain of the investigated link",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'm-oil.cyou']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-25T00:00:00.000Z",
+      "valid_until": "2026-12-24T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "lure-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--bc2b87e7-26ad-5c08-9152-5aedec78522e",
+      "name": "url: https://moneypocket48.my-tng.link/?utm_source=bwoqvej2dmn6&utm_medium=bz0jlqpu&utm_campaign=3tkpawgn9ilqg5h&utm_content=goxilyyexu&utm_term=as9xuhmtx8",
+      "description": "Final landing page",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://moneypocket48.my-tng.link/?utm_source=bwoqvej2dmn6&utm_medium=bz0jlqpu&utm_campaign=3tkpawgn9ilqg5h&utm_content=goxilyyexu&utm_term=as9xuhmtx8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-25T00:00:00.000Z",
+      "valid_until": "2026-10-25T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "landing-page"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--98d948e1-4c38-5504-9445-f4c468ca66de",
+      "name": "domain: moneypocket48.my-tng.link",
+      "description": "Host of the final landing page",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'moneypocket48.my-tng.link']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-25T00:00:00.000Z",
+      "valid_until": "2026-12-24T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "landing-page"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--58606b62-2049-549f-8d1b-4abfeb5a10a0",
+      "name": "ipv4: 104.21.68.75",
+      "description": "Server IP of the landing page. Shared hosting and CDNs mean blocking it may hit other sites",
+      "indicator_types": [
+        "anomalous-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.68.75']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-25T00:00:00.000Z",
+      "valid_until": "2026-10-09T00:00:00.000Z",
+      "confidence": 30,
+      "labels": [
+        "tlp:clear",
+        "landing-page"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--fd0351d8-439c-5382-b78c-7f8d8cd4ef16",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--aa8e1d26-d21f-569f-885e-2651483155cc",
+      "target_ref": "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--454129ba-0347-5597-9e08-3b092f556524",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--aa8e1d26-d21f-569f-885e-2651483155cc",
+      "target_ref": "attack-pattern--497132f3-9146-5c0a-b0ce-33c38a8538d7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--067986a4-a18c-567e-8d56-b9b2522de544",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--aa8e1d26-d21f-569f-885e-2651483155cc",
+      "target_ref": "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "created": "2026-09-25T00:00:00.000Z",
+      "modified": "2026-09-25T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "report--e3e63f54-bcd7-5895-a1ca-df097e9b8262",
+      "name": "Phishing lure impersonating Touch 'n Go, from a QR code",
+      "published": "2026-09-25T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--aa8e1d26-d21f-569f-885e-2651483155cc",
+        "indicator--e12b6953-eb5c-5728-b8f5-844dbd71bfda",
+        "indicator--d299a068-24a9-53b9-b79d-b844079bc53a",
+        "indicator--bc2b87e7-26ad-5c08-9152-5aedec78522e",
+        "indicator--98d948e1-4c38-5504-9445-f4c468ca66de",
+        "indicator--58606b62-2049-549f-8d1b-4abfeb5a10a0",
+        "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e",
+        "attack-pattern--497132f3-9146-5c0a-b0ce-33c38a8538d7",
+        "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a"
+      ]
+    }
+  ]
+}
