@@ -4,10 +4,11 @@ Threat hunting reports on IPs, domains, URLs, file hashes and QR codes, newest f
 
 <!-- fukuro-index:start -->
 
-**5 reports**, newest first.
+**6 reports**, newest first.
 
 | Date | Finding | Subject | Verdict | Report |
 | --- | --- | --- | --- | --- |
+| 2026-09-29 | Phishing lure impersonating Touch 'n Go, from a QR code | `my[.]id` | malicious | [report](2026/09/2026-09-29_phish-touch-n-go-my-id/report.md) |
 | 2026-09-27 | Phishing lure impersonating Touch 'n Go, from a QR code | `qxxdaft[.]it[.]com` | malicious | [report](2026/09/2026-09-27_phish-touch-n-go-it-com/report.md) |
 | 2026-09-25 | Phishing lure impersonating Touch 'n Go, from a QR code | `m-oil[.]cyou` | malicious | [report](2026/09/2026-09-25_phish-touch-n-go-m-oil-cyou/report.md) |
 | 2026-09-24 | Phishing lure impersonating Touch 'n Go, from a QR code | `qxxdaft[.]it[.]com` | malicious | [report](2026/09/2026-09-24_phish-touch-n-go-it-com/report.md) |

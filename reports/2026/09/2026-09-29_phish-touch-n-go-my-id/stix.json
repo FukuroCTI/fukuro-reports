@@ -1,0 +1,292 @@
+{
+  "type": "bundle",
+  "id": "bundle--6676c5a3-43b9-5e89-bc10-18549d359507",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "created": "2026-09-22T00:00:00.000Z",
+      "modified": "2026-09-22T00:00:00.000Z",
+      "name": "FukuroCTI",
+      "identity_class": "individual"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e",
+      "name": "Phishing: Spearphishing Link",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002",
+          "url": "https://attack.mitre.org/techniques/T1566/002/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--497132f3-9146-5c0a-b0ce-33c38a8538d7",
+      "name": "Phishing for Information: Spearphishing Link",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1598.003",
+          "url": "https://attack.mitre.org/techniques/T1598/003/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a",
+      "name": "Acquire Infrastructure: Domains",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001",
+          "url": "https://attack.mitre.org/techniques/T1583/001/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--428982d8-3a8a-5b9d-970e-f1017fee4732",
+      "name": "url: https://tng5.mobilegrub20.my.id",
+      "description": "Investigated indicator. Fukuro verdict: malicious (score -10)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://tng5.mobilegrub20.my.id']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-29T00:00:00.000Z",
+      "valid_until": "2026-10-29T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--d5e3a028-7e3a-5004-bcd2-acfb3f6fa00e",
+      "name": "ipv4: 202.73.25.122",
+      "description": "Resolved IP of https://tng5.mobilegrub20.my.id",
+      "indicator_types": [
+        "anomalous-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '202.73.25.122']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-29T00:00:00.000Z",
+      "valid_until": "2026-10-13T00:00:00.000Z",
+      "confidence": 30,
+      "labels": [
+        "tlp:clear"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--94298cfd-5f90-5107-a44c-c7a6c5d4d265",
+      "name": "domain: tng5.mobilegrub20.my.id",
+      "description": "Domain of the investigated link",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'tng5.mobilegrub20.my.id']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-29T00:00:00.000Z",
+      "valid_until": "2026-12-28T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "lure-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--18909612-aad6-59fc-810c-a87f7361476d",
+      "name": "url: https://tng5.mobilegrub20.my.id/",
+      "description": "Final landing page",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://tng5.mobilegrub20.my.id/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-29T00:00:00.000Z",
+      "valid_until": "2026-10-29T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "landing-page"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--05e42870-e644-587e-b738-2233d4fb6906",
+      "name": "url: https://tng5.mobilegrub20.my.id/login.php",
+      "description": "Page reached from the landing page (continue step)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://tng5.mobilegrub20.my.id/login.php']",
+      "pattern_type": "stix",
+      "valid_from": "2026-09-29T00:00:00.000Z",
+      "valid_until": "2026-10-29T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "landing-page"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--a2d16cd3-b62c-5244-9d04-3a25db2fc85b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--428982d8-3a8a-5b9d-970e-f1017fee4732",
+      "target_ref": "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--1300db20-e449-587e-bc88-6b54bad55a17",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--428982d8-3a8a-5b9d-970e-f1017fee4732",
+      "target_ref": "attack-pattern--497132f3-9146-5c0a-b0ce-33c38a8538d7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--bff94798-bf28-50c4-bee9-d8747520019f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--428982d8-3a8a-5b9d-970e-f1017fee4732",
+      "target_ref": "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "report--01cbbc01-bc4e-5848-bf67-186ae9fd30b3",
+      "name": "Phishing lure impersonating Touch 'n Go, from a QR code",
+      "published": "2026-09-29T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--428982d8-3a8a-5b9d-970e-f1017fee4732",
+        "indicator--d5e3a028-7e3a-5004-bcd2-acfb3f6fa00e",
+        "indicator--94298cfd-5f90-5107-a44c-c7a6c5d4d265",
+        "indicator--18909612-aad6-59fc-810c-a87f7361476d",
+        "indicator--05e42870-e644-587e-b738-2233d4fb6906",
+        "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e",
+        "attack-pattern--497132f3-9146-5c0a-b0ce-33c38a8538d7",
+        "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a"
+      ]
+    }
+  ]
+}
