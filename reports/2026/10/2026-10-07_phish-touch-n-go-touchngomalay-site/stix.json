@@ -1,0 +1,226 @@
+{
+  "type": "bundle",
+  "id": "bundle--8f5cdb67-b6f8-5868-90a2-cdd4dba56d55",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "created": "2026-09-22T00:00:00.000Z",
+      "modified": "2026-09-22T00:00:00.000Z",
+      "name": "FukuroCTI",
+      "identity_class": "individual"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "name": "TLP:WHITE",
+      "definition": {
+        "tlp": "white"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e",
+      "name": "Phishing: Spearphishing Link",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002",
+          "url": "https://attack.mitre.org/techniques/T1566/002/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a",
+      "name": "Acquire Infrastructure: Domains",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.001",
+          "url": "https://attack.mitre.org/techniques/T1583/001/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--89d45935-150b-5892-80ea-d214127c1abb",
+      "name": "domain: touchngomalay.site",
+      "description": "Investigated indicator. Fukuro verdict: malicious (score -10)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'touchngomalay.site']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-07T00:00:00.000Z",
+      "valid_until": "2027-01-05T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--70a8479f-e692-545c-9d65-e3e5e89d89da",
+      "name": "ipv4: 104.21.1.221",
+      "description": "Resolved IP of touchngomalay.site",
+      "indicator_types": [
+        "anomalous-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '104.21.1.221']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-07T00:00:00.000Z",
+      "valid_until": "2026-10-21T00:00:00.000Z",
+      "confidence": 30,
+      "labels": [
+        "tlp:clear"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--99f8cd06-24cf-5112-a8a7-5fcfddcfa25c",
+      "name": "url: https://touchngomalay.site/",
+      "description": "Final landing page",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://touchngomalay.site/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-07T00:00:00.000Z",
+      "valid_until": "2026-11-06T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "landing-page"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "indicator--4dae3f84-e27e-588d-941f-57ade9b60995",
+      "name": "url: https://touchngomalay.site/cdn-cgi/l/email-protection",
+      "description": "Page reached from the landing page (continue step)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://touchngomalay.site/cdn-cgi/l/email-protection']",
+      "pattern_type": "stix",
+      "valid_from": "2026-10-07T00:00:00.000Z",
+      "valid_until": "2026-11-06T00:00:00.000Z",
+      "confidence": 85,
+      "labels": [
+        "tlp:clear",
+        "landing-page"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--e1a91682-3619-5aac-8029-e88428040e3d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--89d45935-150b-5892-80ea-d214127c1abb",
+      "target_ref": "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "relationship--41563dcf-df4c-52c9-9829-648e8cc11d61",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--89d45935-150b-5892-80ea-d214127c1abb",
+      "target_ref": "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "created": "2026-10-07T00:00:00.000Z",
+      "modified": "2026-10-07T00:00:00.000Z",
+      "created_by_ref": "identity--d9938b23-4e15-5d59-94ec-aaca6a31d550",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "id": "report--a3a23cbd-9aa7-5dbf-9978-a8eca47c066f",
+      "name": "Phishing lure impersonating Touch 'n Go",
+      "published": "2026-10-07T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "indicator--89d45935-150b-5892-80ea-d214127c1abb",
+        "indicator--70a8479f-e692-545c-9d65-e3e5e89d89da",
+        "indicator--99f8cd06-24cf-5112-a8a7-5fcfddcfa25c",
+        "indicator--4dae3f84-e27e-588d-941f-57ade9b60995",
+        "attack-pattern--4328b2be-f505-5081-aa64-bdc900ae653e",
+        "attack-pattern--50f44006-0871-597c-a7be-0c78c507e80a"
+      ]
+    }
+  ]
+}
