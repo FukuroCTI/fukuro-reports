@@ -8,7 +8,6 @@ Threat hunting reports on IPs, domains, URLs, file hashes and QR codes, newest f
 
 | Date | Finding | Subject | Verdict | Report |
 | --- | --- | --- | --- | --- |
-| 2026-10-07 | Phishing lure impersonating Touch 'n Go | `touchngomalay[.]site` | malicious | [report](2026/10/2026-10-07_phish-touch-n-go-touchngomalay-site/report.md) |
 | 2026-09-29 | Phishing lure impersonating Touch 'n Go, from a QR code | `my[.]id` | malicious | [report](2026/09/2026-09-29_phish-touch-n-go-my-id/report.md) |
 | 2026-09-27 | Phishing lure impersonating Touch 'n Go, from a QR code | `qxxdaft[.]it[.]com` | malicious | [report](2026/09/2026-09-27_phish-touch-n-go-it-com/report.md) |
 | 2026-09-25 | Phishing lure impersonating Touch 'n Go, from a QR code | `m-oil[.]cyou` | malicious | [report](2026/09/2026-09-25_phish-touch-n-go-m-oil-cyou/report.md) |
