@@ -4,10 +4,11 @@ Threat hunting reports on IPs, domains, URLs, file hashes and QR codes, newest f
 
 <!-- fukuro-index:start -->
 
-**7 reports**, newest first.
+**8 reports**, newest first.
 
 | Date | Finding | Subject | Verdict | Report |
 | --- | --- | --- | --- | --- |
+| 2026-10-13 | Suspicious url | `gmi[.]edu[.]my` | suspicious | [report](2026/10/2026-10-13_url-gmi-edu-my/report.md) |
 | 2026-10-08 | Phishing lure impersonating Touch 'n Go | `touchngomalay[.]site` | malicious | [report](2026/10/2026-10-08_phish-touch-n-go-touchngomalay-site/report.md) |
 | 2026-09-29 | Phishing lure impersonating Touch 'n Go, from a QR code | `my[.]id` | malicious | [report](2026/09/2026-09-29_phish-touch-n-go-my-id/report.md) |
 | 2026-09-27 | Phishing lure impersonating Touch 'n Go, from a QR code | `qxxdaft[.]it[.]com` | malicious | [report](2026/09/2026-09-27_phish-touch-n-go-it-com/report.md) |
